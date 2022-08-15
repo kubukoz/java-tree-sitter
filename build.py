@@ -31,7 +31,7 @@ def build(repositories, output_path="libjava-tree-sitter", arch=None, verbose=Fa
         f"{env} make -C {os.path.join(here, 'tree-sitter')} {'> /dev/null' if not verbose else ''}"
     )
 
-    cpp = False
+    cpp = True
     source_paths = [
         os.path.join(here, "lib", "ai_serenade_treesitter_TreeSitter.cc"),
         os.path.join(here, "lib", "ai_serenade_treesitter_Languages.cc"),
