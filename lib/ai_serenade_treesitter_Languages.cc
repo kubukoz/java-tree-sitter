@@ -266,3 +266,11 @@ Java_ai_serenade_treesitter_Languages_wasm(JNIEnv* env, jclass self) {
   return (jlong)tree_sitter_wasm();
 }
 #endif
+
+#ifdef TS_LANGUAGE_SMITHYQL
+extern "C" TSLanguage* tree_sitter_smithyql();
+JNIEXPORT jlong JNICALL
+Java_ai_serenade_treesitter_Languages_smithyql(JNIEnv* env, jclass self) {
+  return (jlong)tree_sitter_smithyql();
+}
+#endif
